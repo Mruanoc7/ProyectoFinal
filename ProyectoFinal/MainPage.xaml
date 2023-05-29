@@ -1,0 +1,65 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.MainPage"
+             Title="ALAMO"
+             Shell.NavBarIsVisible="false"
+             BackgroundColor="White"
+             FlowDirection="LeftToRight">
+
+    <Grid RowDefinitions="*,2*">
+        <Border StrokeShape="RoundRectangle 0, 0, 30, 30" Opacity="0.6" StrokeThickness="0">
+            <Image Source="background.jpeg" Aspect="AspectFill"/>
+        </Border>
+        
+        <Grid>
+            <Label Text="RENTA TU CARRO &#10; CON NOSOTROS" TextColor="black" FontSize="35" Margin="15" VerticalOptions="End" HorizontalTextAlignment="Center"/>
+        </Grid>
+
+        <HorizontalStackLayout Grid.Row="1">
+            <Grid ColumnDefinitions="Auto,*">
+                <Label Text="CATEGORIAS" TextColor="black" FontSize="15" />
+
+            </Grid>
+   
+        
+    <VerticalStackLayout HorizontalOptions="Start" Margin="20,30">
+            <Frame WidthRequest="100" HeightRequest="100" CornerRadius="10" Padding="0">
+                <ImageButton Source="ford_ranger.png" Clicked="OnCarButtonClicked" CommandParameter="pickup" Aspect="AspectFill"/>
+            </Frame>
+            <Label Text="Ford Ranger" TextColor="Black" FontSize="14"/>
+
+            </VerticalStackLayout>
+       
+        <VerticalStackLayout HorizontalOptions="Start" Margin="20,30">
+            <Frame WidthRequest="100" HeightRequest="100" CornerRadius="10" Padding="0">
+                <ImageButton Source="toyota_corolla.png" Clicked="OnCarButtonClicked" CommandParameter="sedan" Aspect="AspectFill" />
+               
+            </Frame>
+            <Label Text="Toyota Corolla" FontSize="14" TextColor="Black"/>
+
+        </VerticalStackLayout>
+        <VerticalStackLayout HorizontalOptions="Start" Margin="20,30">
+            <Frame WidthRequest="100" HeightRequest="100" CornerRadius="10" Padding="0">
+                <ImageButton Source="jeep_wrangler.png" Clicked="OnCarButtonClicked" CommandParameter="suv" Aspect="AspectFill"/>
+            </Frame>
+            <Label Text="Jeep Wrangler" FontSize="14" TextColor="Black"/>
+
+            </VerticalStackLayout>
+            <Button Text="Ver carros seleccionados" Clicked="OnViewSelectedCarsClicked" />
+
+        </HorizontalStackLayout>
+
+
+
+
+
+
+
+    </Grid>
+
+
+
+
+
+
+</ContentPage>

@@ -1,0 +1,20 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.CarCustomizationPage">
+
+    <StackLayout Spacing="10" Padding="20">
+        <Label Text="Personalizar Carro" FontSize="24" HorizontalOptions="Center" />
+
+        <Label Text="Color:" FontSize="18" />
+        <Entry x:Name="colorEntry" Placeholder="Ingrese el color" />
+
+        <Label Text="Modelo:" FontSize="18" />
+        <Entry x:Name="modeloEntry" Placeholder="Ingrese el modelo" />
+
+        <Label Text="Nombre del Usuario:" FontSize="18" />
+        <Label x:Name="usuarioLabel" FontSize="16" />
+
+        <Button Text="Guardar" Clicked="OnSaveButtonClicked" />
+    </StackLayout>
+
+</ContentPage>

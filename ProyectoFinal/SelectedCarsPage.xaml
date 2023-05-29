@@ -1,0 +1,30 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.SelectedCarsPage">
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="20">
+            <Label Text="Carros seleccionados:" FontSize="24" HorizontalOptions="Center" />
+
+            <ListView x:Name="selectedCarsListView" ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding Marca}" FontAttributes="Bold" FontSize="18" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Modelo: " FontAttributes="Bold" FontSize="16" />
+                                    <Label Text="{Binding Modelo}" FontSize="16" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Año: " FontAttributes="Bold" FontSize="16" />
+                                    <Label Text="{Binding Anio}" FontSize="16" />
+                                </StackLayout>
+                                <BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
